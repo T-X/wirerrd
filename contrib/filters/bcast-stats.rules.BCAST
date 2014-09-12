@@ -1,0 +1,53 @@
+SSDP,udp.dstport == 1900
+ARP,eth.type == 0x0806
+ICMPv6,icmpv6
+LLMNR,udp.dstport == 5355
+NBNS,udp.dstport == 137
+MDNS,udp.dstport == 5353
+DP-LSP-[,udp.dstport == 17500
+trap-daemon,udp.dstport == 3600
+IGMP,igmp
+OSPF,ospf
+NBDGM,browser
+IPv6_fragment,ipv6.nxt == 44
+IPv4_fragment,ip.flags.mf == 1 || ip.frag_offset > 0
+DHCP,bootp
+DHCPv6,udp.dstport == 547
+XID,llc.control == 0x00af
+BJNP,bjnp
+ws-discovery,udp.dstport == 3702
+IPX,llc.control == 0x0003
+IPX_RIP,ipx.src.socket == 0x0453
+WSP,udp.dstport == 9200
+Teredo,udp.dstport == 3544
+IPv6_no_next_header,ipv6.nxt == 59
+Spotify,udp.dstport == 57621
+udp-8225,udp.dstport == 8225
+udp-5060,udp.dstport == 5060
+BT-LPD,udp.dstport == 6771
+SVRLOC,udp.dstport == 427
+enpc,udp.dstport == 3289
+QuckTime_Streaming_Server,udp.dstport == 7555
+hdhomerun,udp.dstport == 65001
+udp-32410,udp.dstport == 32410
+BT-uTP,udp.dstport == 16680
+udp-32414,udp.dstport == 32414
+Worry-Free_Business_Security_Services,udp.dstport == 61117
+faximum,udp.dstport == 7437
+Tomcat,udp.dstport == 9006
+distinct,udp.dstport == 9999
+udp-25412,udp.dstport == 25412
+udp-10203,udp.dstport == 10203
+udp-60128,udp.dstport == 60128
+Corel_VNC_Admin,udp.dstport == 2654
+hpvmmcontrol,udp.dstport == 1124
+cbt,udp.dstport == 7777
+udp-6646,udp.dstport == 6646
+udp-39455,udp.dstport == 39455
+udp-889,udp.dstport == 889
+HIP,ip.proto == 139
+TSource_Engine_Query,udp.dstport == 0
+RIP,rip
+RIPng,ripng
+PIM,pim
+udp-16962,udp.dstport == 16962

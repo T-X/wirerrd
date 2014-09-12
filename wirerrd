@@ -1,0 +1,69 @@
+#!/bin/sh
+
+usage() {
+	cat << __EOF
+Usage:
+
+weirrd -h
+
+  -h
+    Prints this help page.
+
+
+weirrd collect -i INTERFACE -o RRDDIRECTORY -f FILTERFILE [-j THREADS]
+
+This starts the monitoring process on a network interface and stores the
+according statistics in round-robin databeses, sorted by the provided filter
+rules.
+
+  -i INTERFACE
+    The network interface to monitor
+
+  -o RRDDIRECTORY
+    The directory for round-robin databases where the collected statistics
+    should be stored in
+
+  -f FILTERFILE
+    The top level file with wireshark filter rules
+    (line format: "LABEL,WIRESHARKFILTER", without quotations)
+
+  -j THREADS
+    The number of tshark instances to use for filtering (called with nice level 5)
+    (optional, defaulting to 2 * #CPUs)
+
+
+weirrd export -i RRDDIRECTORY -o EXPORTSYMLINK
+
+This reads the collected statistics from the provided round-robin databases
+and stores them in RRD-XML exports and renders some graphs.
+
+  -i RRDDIRECTORY
+    The directory to read the round-robin databases from
+
+  -o EXPORTSYMLINK
+    The symlink is going to point to the directory in /tmp/ where
+    the images and databes dumps will be stored
+    (the symlink approach allows seemless updating)
+__EOF
+}
+
+while getopts "h" opt; do
+	case $opt in
+		h)	usage; exit 1 ;;
+	esac
+done
+
+[ -z "$1" ] && {
+	echo "Error, no option specified" >&2
+	echo "Check $0 -h" >&2
+	exit 1
+}
+
+case "$1" in
+	collect)	shift; exec ./lib/wirerrd-collect.sh $@ ;;
+	export)		shift; exec ./lib/wirerrd-export.sh $@ ;;
+	*)		echo "Error, invalid option \"$1\"" >&2 ;;
+esac
+
+echo "Check $0 -h" >&2
+exit 1

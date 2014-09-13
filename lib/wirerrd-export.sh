@@ -79,6 +79,7 @@ tmpdir="`mktemp -d --tmpdir=/tmp .${0##*/}.$exportdirhash.XXXXXXXXXX`"
 	echo "Error, could not create temporary directory \"$tmpdir\"" >&2
 	exit 1
 }
+chmod 755 "$tmpdir"
 
 ln -s "$tmpdir/out" "$tmpdir/link"
 

@@ -19,7 +19,11 @@ See "wirerdd -h" for the usage of "wirerdd collect" and "wirerdd export".
 
 "wirerdd collect" is a tool which you should run in the background while
 "wirerdd export" is a run-once tool, so you might want to put it into your
-cron/crontab.
+cron/crontab, for instance like this:
+
+<pre><code>
+*/5 *  * * * cd ~/dev/wirerrd/; ./wirerrd export -i ~/dev/analyzer/rrd -o ~/public_html/Freifunk/stats/ffhh
+</code></pre>
 
 ## Filter files
 

@@ -1,0 +1,3 @@
+probe,arp.src.proto_ipv4 == 0.0.0.0
+gratuitous,!(arp.src.proto_ipv4 == 0.0.0.0) && arp.src.proto_ipv4 == arp.dst.proto_ipv4
+altgratuitous,!(arp.src.proto_ipv4 == 0.0.0.0) && arp.isgratuitous && !(arp.src.proto_ipv4 == arp.dst.proto_ipv4)

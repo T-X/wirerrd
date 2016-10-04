@@ -1,0 +1,2 @@
+REQUEST,arp.opcode == 1
+REPLY,arp.opcode == 2

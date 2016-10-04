@@ -1,0 +1,8 @@
+flags-none,icmpv6.nd.na.flag.r == 0 && icmpv6.nd.na.flag.o == 0 && icmpv6.nd.na.flag.s == 0
+flags-r,icmpv6.nd.na.flag.r == 1 && icmpv6.nd.na.flag.o == 0 && icmpv6.nd.na.flag.s == 0
+flags-o,icmpv6.nd.na.flag.r == 0 && icmpv6.nd.na.flag.o == 1 && icmpv6.nd.na.flag.s == 0
+flags-s,icmpv6.nd.na.flag.r == 0 && icmpv6.nd.na.flag.o == 0 && icmpv6.nd.na.flag.s == 1
+flags-ro,icmpv6.nd.na.flag.r == 1 && icmpv6.nd.na.flag.o == 1 && icmpv6.nd.na.flag.s == 0
+flags-os,icmpv6.nd.na.flag.r == 0 && icmpv6.nd.na.flag.o == 1 && icmpv6.nd.na.flag.s == 1
+flags-rs,icmpv6.nd.na.flag.r == 1 && icmpv6.nd.na.flag.o == 0 && icmpv6.nd.na.flag.s == 1
+flags-ros,icmpv6.nd.na.flag.r == 1 && icmpv6.nd.na.flag.o == 1 && icmpv6.nd.na.flag.s == 1

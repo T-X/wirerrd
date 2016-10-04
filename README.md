@@ -6,7 +6,7 @@ are determined by wireshark filter rules.
 
 ## Requirements
 
-* tshark
+* tshark (>= v2 recommended for contrib examples)
 * dumpcap
 * rrdtool
 * inotifywait

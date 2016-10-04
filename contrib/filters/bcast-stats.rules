@@ -1,10 +1,10 @@
-OGM,batadv.batman.packet_type == 1
-ICMP,batadv.batman.packet_type == 2
-UCAST,batadv.batman.packet_type == 3
-BCAST,batadv.batman.packet_type == 4
-VIS,batadv.batman.packet_type == 5
-UCAST_FRAG,batadv.batman.packet_type == 6
-TT,batadv.batman.packet_type == 7
-ROAM,batadv.batman.packet_type == 8
-UCAST4,batadv.batman.packet_type == 9
-CODED,batadv.batman.packet_type == 10
+OGM,batadv.batman.version || batadv.iv_ogm.version
+ICMP,batadv.icmp.version
+UCAST,batadv.unicast.version
+BCAST,batadv.bcast.version
+VIS,batadv.vis.version
+UCAST_FRAG,batadv.unicast_frag.version
+TT,batadv.tt_query.version
+ROAM,batadv.roam_adv.version
+UCAST4,batadv.unicast_4addr.version
+CODED,batadv.coded.version

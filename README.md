@@ -13,7 +13,7 @@ are determined by wireshark filter rules.
 * csvtool
 * getopts
 * gnuplot
-* ImageMagick ("convert" tool)
+* convert (from ImageMagick suite)
 
 ## Usage
 

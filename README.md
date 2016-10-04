@@ -12,6 +12,8 @@ are determined by wireshark filter rules.
 * inotifywait
 * csvtool
 * getopts
+* gnuplot
+* ImageMagick ("convert" tool)
 
 ## Usage
 

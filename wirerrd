@@ -4,13 +4,13 @@ usage() {
 	cat << __EOF
 Usage:
 
-weirrd -h
+wirerrd -h
 
   -h
     Prints this help page.
 
 
-weirrd collect -i INTERFACE -o RRDDIRECTORY -f FILTERFILE [-j THREADS]
+wirerrd collect -i INTERFACE -o RRDDIRECTORY -f FILTERFILE [-j THREADS]
 
 This starts the monitoring process on a network interface and stores the
 according statistics in round-robin databeses, sorted by the provided filter
@@ -32,7 +32,7 @@ rules.
     (optional, defaulting to 2 * #CPUs)
 
 
-weirrd export -i RRDDIRECTORY -o EXPORTSYMLINK
+wirerrd export -i RRDDIRECTORY -o EXPORTSYMLINK
 
 This reads the collected statistics from the provided round-robin databases
 and stores them in RRD-XML exports and renders some graphs.
